@@ -1,7 +1,7 @@
 (function() {
   "use strict";
 
-  var countDownDate = new Date("June 6, 2022 00:00:00").getTime();
+  var countDownDate = new Date("June 7, 2022 00:00:00").getTime();
   var x = setInterval(function(){
     
     var now = new Date().getTime();
@@ -17,10 +17,10 @@
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
 
-    if(distance = 0){
+    if(distance < 0){
       clearInterval(x);
-      document.querySelector("h1").innerText = "We Have Arrived!";
-      document.querySelector("p").innerHTML = "The big day is finally here - view our <a href=https://www.website.com>website<a/> for more information.";
+      document.querySelector("h3").innerText = "Siap Memberikan Design Terbaik untuk Anda ";
+      // document.querySelector("h3").innerHTML = "";
       const digit = document.querySelectorAll("span");
       digit.forEach((digit) => {
         digit.innerText = "0";
